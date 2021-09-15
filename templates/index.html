@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Purushotham's personal site</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="icon" href="static/favicon2.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Merriweather:wght@300&family=Press+Start+2P&family=Sacramento&family=Shrikhand&display=swap" rel="stylesheet"></head>
+<body style="">
+<div class="top-container">
+    <img class = "moon" src="static/moon5.png" alt="moon" width = 30%>
+            <img class = "second-cloud" src="static/cloud.png" alt="cloud" width=30%>
+
+    <h1>I'm Purushotham</h1>
+        <img class = "bottom-cloud" src="static/cloud.png" alt="cloud" width=100%>
+</div>
+<div class="middle-container">
+  <div class="profile">
+    <img src="static/profile.png" alt="">
+    <h2>Hello.</h2>
+    <p class ="intro"> I am a Python and web developer, I like turning complex data into useful insights. I ❤️  Mathematics,reading Albert Camus and making amazing South Indian coffees</p>
+  </div>
+  <hr>
+    <h2>My Projects</h2>
+    {% for blog_post in posts: %}
+
+
+        <div class="content">
+                <div class="card">
+
+                             <h2 class="names">{{blog_post["Name"]}}</h2>
+                             <p>{{blog_post["About"]}}</p>
+                             <a href="{{blog_post['URL']}}">Project Link</a>
+                </div>
+            </div>
+    {% endfor %}
+
+    <br><br><br><br><br><br>
+  <hr>
+  <div class="contact-me">
+    <h2>Get In Touch</h2>
+    <p class="contact-message"> One of my favorite things to do is meet new people and learn from their many experiences.Chat to me here!</p>
+    <a class="btn" href="mailto:purushothamkoduri19@gmail.com">CONTACT ME</a>
+  </div>
+</div>
+
+
+<div class="bottom-container">
+  <a class="footer-link" href="https://www.linkedin.com/in/purushotham-koduri-5a4628140">LinkedIn</a>
+  <a class="footer-link" href="https://github.com/NinjaNekoSama">Github</a>
+  <p class = "copyright">©2021 Purushotham Koduri.</p>
+
+</div>
+</body>
+</html>
